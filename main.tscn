@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=15 format=4 uid="uid://cmeffl8kd3cur"]
-=======
 [gd_scene load_steps=40 format=4 uid="uid://ddtvw2c2gh26i"]
->>>>>>> c5317f85eb049266daa574149547480f6eda1ee4
 
 [ext_resource type="Texture2D" uid="uid://10ew0edbfi64" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Grass.png" id="1_d1hwk"]
 [ext_resource type="Texture2D" uid="uid://ben6lmypuhx8j" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Plant.png" id="2_8hm8h"]
@@ -2205,45 +2201,30 @@ tile_set = SubResource("TileSet_gcrcg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
-visible = false
 
-<<<<<<< HEAD
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-material = SubResource("ShaderMaterial_uu3hi")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1178.0
-offset_top = -358.0
-offset_right = 122.0
-offset_bottom = 493.0
-grow_horizontal = 2
-grow_vertical = 2
-
-=======
->>>>>>> c5317f85eb049266daa574149547480f6eda1ee4
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
 libraries = {
 "": SubResource("AnimationLibrary_b4ohn")
 }
 speed_scale = 0.1
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("10_0cp2m")]
+[node name="Player1" parent="." instance=ExtResource("10_0cp2m")]
 position = Vector2(251, 186)
 collision_layer = 2
 speed = 100
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Player1"]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 metadata/_edit_group_ = true
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("10_0cp2m")]
+[node name="Player2" parent="." instance=ExtResource("10_0cp2m")]
 position = Vector2(251, 186)
-collision_layer = 2
+collision_layer = 4
 script = ExtResource("11_k0qhn")
+speed = 100
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D2"]
+[node name="Camera2D" type="Camera2D" parent="Player2"]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 metadata/_edit_group_ = true
@@ -2256,7 +2237,7 @@ gravity_scale = 0.0
 script = ExtResource("11_g1dk1")
 force = 360
 gravity = 4775
-black_hole = NodePath("../CharacterBody2D")
+black_hole = NodePath("../Player1")
 power = 2.305
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
