@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://ddtvw2c2gh26i"]
+[gd_scene load_steps=15 format=4 uid="uid://cmeffl8kd3cur"]
 
 [ext_resource type="Texture2D" uid="uid://10ew0edbfi64" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Grass.png" id="1_d1hwk"]
 [ext_resource type="Texture2D" uid="uid://odg4ughtjl5i" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Stone Ground.png" id="2_wx5sl"]
@@ -590,16 +590,17 @@ texture = ExtResource("4_0pbvx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_uu3hi")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1209.0
-offset_top = -165.0
-offset_right = 91.0
-offset_bottom = 686.0
+offset_left = -1178.0
+offset_top = -358.0
+offset_right = 122.0
+offset_bottom = 493.0
 grow_horizontal = 2
 grow_vertical = 2
 
