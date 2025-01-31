@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="jeu-1"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/always_on_top=true
 
 [input]
 
@@ -59,9 +64,11 @@ left_p2={
 
 [layer_names]
 
-2d_physics/layer_1="world"
-2d_physics/layer_2="p1"
-2d_physics/layer_3="p2"
+2d_physics/layer_1="ground"
+2d_physics/layer_2="floor1"
+2d_physics/layer_3="floor2"
+2d_physics/layer_4="floor3"
+2d_physics/layer_5="players"
 
 [rendering]
 
