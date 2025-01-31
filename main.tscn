@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://ddtvw2c2gh26i"]
+[gd_scene load_steps=40 format=4 uid="uid://dnuyxnifqttqp"]
 
 [ext_resource type="Texture2D" uid="uid://10ew0edbfi64" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Grass.png" id="1_d1hwk"]
 [ext_resource type="Texture2D" uid="uid://ben6lmypuhx8j" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Plant.png" id="2_8hm8h"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dyfffpq2ngsxs" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Shadow.png" id="5_us606"]
 [ext_resource type="Shader" path="res://post_processing.gdshader" id="5_ybmfs"]
 [ext_resource type="Texture2D" uid="uid://754ryhmnr15w" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Struct.png" id="8_gp2fo"]
-[ext_resource type="PackedScene" uid="uid://dqtrg70mkgdq4" path="res://temp.tscn" id="10_0cp2m"]
+[ext_resource type="PackedScene" path="res://temp.tscn" id="10_0cp2m"]
 [ext_resource type="Script" path="res://ball.gd" id="11_g1dk1"]
 [ext_resource type="Script" path="res://temp2.gd" id="11_k0qhn"]
 
@@ -2259,6 +2259,10 @@ position = Vector2(288, 155)
 texture = ExtResource("4_0pbvx")
 region_enabled = true
 region_rect = Rect2(264, 104, 16, 56)
+
+[node name="TxTilesetStoneGround" type="Sprite2D" parent="."]
+position = Vector2(-449, 277)
+texture = ExtResource("2_wx5sl")
 
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_exited"]
