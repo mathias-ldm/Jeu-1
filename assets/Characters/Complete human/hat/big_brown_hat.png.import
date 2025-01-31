@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d06kqhkf6shvs"
-path="res://.godot/imported/big_brown_hat.png-d5966aaabab88801e8b0055649efa85c.ctex"
+path="res://.godot/imported/big_brown_hat.png-ada9869eacca77e0332dc79cd95a536e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/ressources/hat/big_brown_hat.png"
-dest_files=["res://.godot/imported/big_brown_hat.png-d5966aaabab88801e8b0055649efa85c.ctex"]
+source_file="res://assets/Characters/Complete human/hat/big_brown_hat.png"
+dest_files=["res://.godot/imported/big_brown_hat.png-ada9869eacca77e0332dc79cd95a536e.ctex"]
 
 [params]
 

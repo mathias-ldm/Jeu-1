@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgbtgd0mg5e2g"
-path="res://.godot/imported/blue clothes.png-89b2df51ad45c650dd7b6b19c3727efb.ctex"
+uid="uid://dddmcfnc5fgfl"
+path="res://.godot/imported/blue clothes.png-4db63cbf981253b75a83cac8256ed79d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/ressources/clothes/blue clothes.png"
-dest_files=["res://.godot/imported/blue clothes.png-89b2df51ad45c650dd7b6b19c3727efb.ctex"]
+source_file="res://assets/Characters/Complete human/clothes/blue clothes.png"
+dest_files=["res://.godot/imported/blue clothes.png-4db63cbf981253b75a83cac8256ed79d.ctex"]
 
 [params]
 

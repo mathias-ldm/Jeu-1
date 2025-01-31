@@ -36,7 +36,6 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	get_direction_vector(input_direction)
 	update_animation_direction(input_direction) # choose between idle and walk
-	update_walk_timer(delta, input_direction)
 	speed = compute_speed_coef(delta)
 	velocity = input_direction * move_coef * move_speed
 	

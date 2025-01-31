@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdh420leta0t2"
-path="res://.godot/imported/bra.png-bd03b1ae9d701b5b3be76ee97a25b463.ctex"
+uid="uid://c34hwtg3tr6q4"
+path="res://.godot/imported/bra.png-7839ec02e91bd01fb56d6b704e1cde20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/ressources/clothes/bra.png"
-dest_files=["res://.godot/imported/bra.png-bd03b1ae9d701b5b3be76ee97a25b463.ctex"]
+source_file="res://assets/Characters/Complete human/clothes/bra.png"
+dest_files=["res://.godot/imported/bra.png-7839ec02e91bd01fb56d6b704e1cde20.ctex"]
 
 [params]
 

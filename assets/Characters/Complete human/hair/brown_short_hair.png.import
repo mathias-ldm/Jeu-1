@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkxpew13ilkit"
-path="res://.godot/imported/brown_short_hair.png-0e7eb3a4f1bf8858605af9eedcc0b858.ctex"
+path="res://.godot/imported/brown_short_hair.png-420abc9a51cf66e944376f4af5e745f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/ressources/hair/brown_short_hair.png"
-dest_files=["res://.godot/imported/brown_short_hair.png-0e7eb3a4f1bf8858605af9eedcc0b858.ctex"]
+source_file="res://assets/Characters/Complete human/hair/brown_short_hair.png"
+dest_files=["res://.godot/imported/brown_short_hair.png-420abc9a51cf66e944376f4af5e745f6.ctex"]
 
 [params]
 
