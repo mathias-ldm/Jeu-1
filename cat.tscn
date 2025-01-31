@@ -231,6 +231,7 @@ size = Vector2(13, 11)
 texture = ExtResource("1_ep235")
 hframes = 32
 vframes = 17
+frame = 436
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_dj8da")
