@@ -17,7 +17,13 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/always_on_top=true
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
+window/stretch/scale_mode="integer"
+window/vsync/vsync_mode=2
 
 [input]
 
@@ -69,6 +75,11 @@ left_p2={
 2d_physics/layer_3="floor2"
 2d_physics/layer_4="floor3"
 2d_physics/layer_5="players"
+
+[physics]
+
+common/physics_jitter_fix=2.0
+common/physics_interpolation=true
 
 [rendering]
 

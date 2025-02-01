@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var direction = Vector2()
 	direction.x = Input.get_action_strength("right_" + id) - Input.get_action_strength("left_" + id)
 	direction.y = Input.get_action_strength("down_" + id) - Input.get_action_strength("up_" + id)
