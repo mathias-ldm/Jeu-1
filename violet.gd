@@ -71,3 +71,4 @@ func update_move_speed(speed_coef: float):
 	else:
 		$AnimatedSprite2D.set("speed_scale", speed_coef * animation_constant)
 		velocity = speed_coef * max_speed * input_direction
+ 
