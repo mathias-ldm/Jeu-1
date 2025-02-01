@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+#v1
+
 # animations speeds :
 # idle : 1
 # walk : 1.5
@@ -71,4 +73,3 @@ func update_move_speed(speed_coef: float):
 	else:
 		$AnimatedSprite2D.set("speed_scale", speed_coef * animation_constant)
 		velocity = speed_coef * max_speed * input_direction
- 
