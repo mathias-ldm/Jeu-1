@@ -13,6 +13,7 @@ extends CharacterBody2D
 @export var speed_curve: Curve
 @export_enum("p1", "p2") var id: String = "p2"
 @export var animation_constant:float = 2
+@export var inertia = 100
 
 const idle_coef: float = 0.5
 const max_speed: float = 100
@@ -27,6 +28,8 @@ var speed_coef: float = 1
 var input_direction: Vector2
 var walk_timer: float = 0.0
 
+var added_velocity: Vector2 # used by moving platforms
+
 func _ready() -> void:
 	$AnimatedSprite2D.play("idle_N")
 	animation_tree.set("parameters/Idle/BlendSpace2D/blend_position", starting_direction)
@@ -38,7 +41,10 @@ func _physics_process(delta: float) -> void:
 	update_animation(input_direction) # choose direction
 	update_move_speed(speed_coef)
 	
+	
 	move_and_slide()
+	
+	move_objects()
 	
 func get_direction_vector():
 	input_direction = Vector2(
@@ -69,7 +75,20 @@ func compute_speed_coef(timer: float):
 func update_move_speed(speed_coef: float):
 	if(speed_coef == 0.0):
 		$AnimatedSprite2D.set("speed_scale", idle_coef)
-		velocity = Vector2.ZERO
+		velocity = Vector2.ZERO + added_velocity
 	else:
 		$AnimatedSprite2D.set("speed_scale", speed_coef * animation_constant)
-		velocity = speed_coef * max_speed * input_direction
+		velocity = speed_coef * max_speed * input_direction + added_velocity
+
+func change_floor(new_floor: int) -> void:
+	print("player", global_position)
+	print(new_floor)
+	collision_mask = collision_mask & int(pow(2, 32) - pow(2,3)) | 0b1<<new_floor
+	# 32 is the total number of layers, 3 is the number of floors, first operation removes the 3 first bits, 2nd replaces them
+	z_index = new_floor
+
+func move_objects():
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		if collision.get_collider().is_in_group("pushable"):
+			collision.get_collider().apply_central_impulse(-collision.get_normal() * inertia / (1 if velocity.x * velocity.y == 0 else 2))

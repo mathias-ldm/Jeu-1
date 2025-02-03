@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c4juabs7d6km"]
 
-[ext_resource type="Script" path="res://Objects/pressure_plate.gd" id="1_loc51"]
+[ext_resource type="Script" path="res://objects/pressure_plate.gd" id="1_loc51"]
 [ext_resource type="Texture2D" uid="uid://65jkl53pm6ui" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Props.png" id="2_8aetw"]
 [ext_resource type="Texture2D" uid="uid://dyfffpq2ngsxs" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Shadow.png" id="2_jno0i"]
 [ext_resource type="Environment" uid="uid://biwl0bgifyyqj" path="res://world_env.tres" id="3_er3iv"]
