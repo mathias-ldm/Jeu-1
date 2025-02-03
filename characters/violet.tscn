@@ -1,4 +1,4 @@
-[gd_scene load_steps=224 format=3 uid="uid://b3141w0lk245k"]
+[gd_scene load_steps=226 format=3 uid="uid://b3141w0lk245k"]
 
 [ext_resource type="Texture2D" uid="uid://b188f5t24cl2p" path="res://assets/Violet/Dash - NEW/Dash_up.png" id="1_6mt4p"]
 [ext_resource type="Script" path="res://characters/violet.gd" id="1_c5jxe"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://k7447kgygsc4" path="res://assets/Violet/Walk/walk_left_down.png" id="18_ty3c2"]
 [ext_resource type="Script" path="res://characters/outline.gd" id="20_f6i8t"]
 [ext_resource type="Shader" path="res://characters/outline.gdshader" id="21_mymi1"]
+[ext_resource type="Texture2D" uid="uid://dm3lomqrreknh" path="res://assets/star_front.png" id="22_sbnwx"]
 
 [sub_resource type="Curve" id="Curve_gu0cf"]
 _data = [Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -1605,6 +1606,9 @@ shader_parameter/silhouette_color = Color(0, 0, 0, 0.392157)
 radius = 5.0
 height = 16.0
 
+[sub_resource type="Theme" id="Theme_d0bs7"]
+default_font_size = 30
+
 [node name="Violet" type="CharacterBody2D" groups=["entity"]]
 collision_layer = 8
 motion_mode = 1
@@ -1647,3 +1651,24 @@ shape = SubResource("CapsuleShape2D_34rmc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -12)
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GUI"]
+
+[node name="Label" type="Label" parent="GUI/CanvasLayer"]
+offset_left = 91.0
+offset_top = 15.0
+offset_right = 150.0
+offset_bottom = 57.0
+theme = SubResource("Theme_d0bs7")
+text = "x 00"
+
+[node name="StarFront" type="Sprite2D" parent="GUI/CanvasLayer"]
+position = Vector2(39, 35)
+scale = Vector2(2.114, 2)
+texture = ExtResource("22_sbnwx")

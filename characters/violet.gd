@@ -77,8 +77,8 @@ func update_move_speed(speed_coef: float):
 		$AnimatedSprite2D.set("speed_scale", idle_coef)
 		velocity = Vector2.ZERO + added_velocity
 	else:
-		$AnimatedSprite2D.set("speed_scale", speed_coef * animation_constant)
 		velocity = speed_coef * max_speed * input_direction + added_velocity
+		$AnimatedSprite2D.set("speed_scale", speed_coef * animation_constant)
 
 func change_floor(new_floor: int) -> void:
 	print("player", global_position)
@@ -91,4 +91,5 @@ func move_objects():
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		if collision.get_collider().is_in_group("pushable"):
-			collision.get_collider().apply_central_impulse(-collision.get_normal() * inertia / (1 if velocity.x * velocity.y == 0 else 2))
+			var final_inertia = inertia / (1 if velocity.x * velocity.y == 0 else 2) * (1 if velocity else 0.5)
+			collision.get_collider().apply_central_impulse(-collision.get_normal() * final_inertia)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb7nht3r38kjd"
-path="res://.godot/imported/Grass with river.png-1a772947fb01d282c01f3db56a19a0c4.ctex"
+uid="uid://jx5igi6rlq0r"
+path="res://.godot/imported/TX Plant + Shadow.png-f74d8dd8aaf3036296cd3ad3c6001d34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/Grass with river.png"
-dest_files=["res://.godot/imported/Grass with river.png-1a772947fb01d282c01f3db56a19a0c4.ctex"]
+source_file="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Plant + Shadow.png"
+dest_files=["res://.godot/imported/TX Plant + Shadow.png-f74d8dd8aaf3036296cd3ad3c6001d34.ctex"]
 
 [params]
 
