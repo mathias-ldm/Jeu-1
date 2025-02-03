@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7ssdvs644sqr"]
 
-[ext_resource type="Script" path="res://Objects/megalith.gd" id="1_unqb5"]
+[ext_resource type="Script" path="res://objects/megalith.gd" id="1_unqb5"]
 [ext_resource type="Texture2D" uid="uid://65jkl53pm6ui" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Props.png" id="2_sxff5"]
 
 [sub_resource type="Animation" id="Animation_c4kwy"]

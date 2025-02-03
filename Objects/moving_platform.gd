@@ -24,7 +24,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if players.size() == 2:
 		players = players.duplicate() # deep copy
 		$AnimatableBody2D/OpenSide.set_deferred("disabled", false)
-		$AnimatableBody2D/ClosedSides.set_deferred("disabled", false)
 		$AnimationPlayer.play("leave")
 		for p in players:
 			p.added_velocity = move_velocity
@@ -34,6 +33,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "leave":
 		$AnimatableBody2D/OpenSide.set_deferred("disabled", true)
+		$AnimatableBody2D/ClosedSides.set_deferred("disabled", true)
 		for p in players:
 			p.added_velocity = Vector2.ZERO
 	if anim_name == "dock":

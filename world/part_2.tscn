@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://odg4ughtjl5i" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Stone Ground.png" id="4_l4yop"]
 [ext_resource type="Texture2D" uid="uid://6vpbr4n675v5" path="res://assets/stone_bridges.png" id="5_nv8pq"]
 [ext_resource type="Texture2D" uid="uid://cmavmqp4swhjp" path="res://assets/WaterFall/waterfall_animated.png" id="7_wurpk"]
-[ext_resource type="Shader" path="res://emptying_water.gdshader" id="8_xjto8"]
+[ext_resource type="Shader" path="res://shaders_and_materials/emptying_water.gdshader" id="8_xjto8"]
 [ext_resource type="Texture2D" uid="uid://0ami683iq2uo" path="res://assets/Water_only.png" id="9_dykjl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4amx6"]

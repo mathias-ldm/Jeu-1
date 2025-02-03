@@ -1,7 +1,7 @@
 [gd_scene load_steps=37 format=4 uid="uid://cqrujrch464g2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_xh12u"]
-[ext_resource type="Shader" path="res://post_processing.gdshader" id="2_a7tu4"]
+[ext_resource type="Shader" path="res://shaders_and_materials/post_processing.gdshader" id="2_a7tu4"]
 [ext_resource type="Texture2D" uid="uid://10ew0edbfi64" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Grass.png" id="3_qgwwd"]
 [ext_resource type="Texture2D" uid="uid://lqm4q4nrnjnl" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Wall.png" id="4_d75cu"]
 [ext_resource type="Texture2D" uid="uid://dd8itdretddsv" path="res://assets/collision_tile.png" id="5_hncei"]
