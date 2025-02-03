@@ -1,0 +1,132 @@
+[gd_scene load_steps=10 format=3 uid="uid://c4juabs7d6km"]
+
+[ext_resource type="Script" path="res://Objects/pressure_plate.gd" id="1_loc51"]
+[ext_resource type="Texture2D" uid="uid://65jkl53pm6ui" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Props.png" id="2_8aetw"]
+[ext_resource type="Texture2D" uid="uid://dyfffpq2ngsxs" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Shadow.png" id="2_jno0i"]
+[ext_resource type="Environment" uid="uid://biwl0bgifyyqj" path="res://world_env.tres" id="3_er3iv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8g4ao"]
+size = Vector2(34, 25)
+
+[sub_resource type="Animation" id="Animation_heyyw"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Runes:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(2, 1.2, 2, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_js7gh"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Runes:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_41e3v"]
+resource_name = "glow"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Runes:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(2, 1.2, 2, 1), Color(2, 1.2, 2, 0.4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dic1i"]
+_data = {
+"fade_in": SubResource("Animation_heyyw"),
+"fade_out": SubResource("Animation_js7gh"),
+"glow": SubResource("Animation_41e3v")
+}
+
+[node name="PressurePlate" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_loc51")
+
+[node name="TxShadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(5, -100)
+texture = ExtResource("2_jno0i")
+offset = Vector2(0, 100)
+region_enabled = true
+region_rect = Rect2(352, 264, 96, 80)
+
+[node name="Stone" type="Sprite2D" parent="."]
+position = Vector2(-1, -100)
+texture = ExtResource("2_8aetw")
+offset = Vector2(0, 100)
+region_enabled = true
+region_rect = Rect2(352, 264, 96, 80)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_8g4ao")
+
+[node name="Runes" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+
+[node name="RuneW" type="Sprite2D" parent="Runes"]
+position = Vector2(-40, -103)
+texture = ExtResource("2_8aetw")
+offset = Vector2(0, 100)
+region_enabled = true
+region_rect = Rect2(328, 264, 8, 8)
+
+[node name="RuneN" type="Sprite2D" parent="Runes"]
+position = Vector2(0, -130)
+texture = ExtResource("2_8aetw")
+offset = Vector2(0, 100)
+region_enabled = true
+region_rect = Rect2(336, 264, 8, 8)
+
+[node name="RuneS" type="Sprite2D" parent="Runes"]
+position = Vector2(-1, -75)
+texture = ExtResource("2_8aetw")
+offset = Vector2(0, 100)
+region_enabled = true
+region_rect = Rect2(328, 272, 8, 8)
+
+[node name="RuneE" type="Sprite2D" parent="Runes"]
+position = Vector2(39, -102)
+texture = ExtResource("2_8aetw")
+offset = Vector2(0, 100)
+region_enabled = true
+region_rect = Rect2(336, 272, 8, 8)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_er3iv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dic1i")
+}
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_detected"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_detected"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

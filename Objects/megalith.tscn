@@ -1,0 +1,109 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7ssdvs644sqr"]
+
+[ext_resource type="Script" path="res://Objects/megalith.gd" id="1_unqb5"]
+[ext_resource type="Texture2D" uid="uid://65jkl53pm6ui" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Props.png" id="2_sxff5"]
+
+[sub_resource type="Animation" id="Animation_c4kwy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Runes:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Runes:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_8ytlf"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Runes:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(2, 1.2, 2, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_reost"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Runes:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5aehi"]
+resource_name = "glow"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Runes:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(2, 1.2, 2, 1), Color(2, 1.2, 2, 0.4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3jxaq"]
+_data = {
+"RESET": SubResource("Animation_c4kwy"),
+"fade_in": SubResource("Animation_8ytlf"),
+"fade_out": SubResource("Animation_reost"),
+"glow": SubResource("Animation_5aehi")
+}
+
+[node name="Megalith" type="Node2D"]
+script = ExtResource("1_unqb5")
+
+[node name="Stone" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("2_sxff5")
+region_enabled = true
+region_rect = Rect2(224, 88, 32, 72)
+
+[node name="Runes" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 3)
+texture = ExtResource("2_sxff5")
+region_enabled = true
+region_rect = Rect2(264, 104, 16, 48)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3jxaq")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

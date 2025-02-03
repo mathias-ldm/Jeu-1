@@ -19,11 +19,15 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
+window/size/mode=2
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_width"
+window/stretch/aspect="ignore"
 window/stretch/scale_mode="integer"
-window/vsync/vsync_mode=2
+
+[global_group]
+
+pushable="can be pushed by the player"
+entity="can be detected by pressure plates, moved by platforms, etc..."
 
 [input]
 
@@ -70,11 +74,11 @@ left_p2={
 
 [layer_names]
 
-2d_physics/layer_1="ground"
+2d_physics/layer_1="floor0"
 2d_physics/layer_2="floor1"
 2d_physics/layer_3="floor2"
-2d_physics/layer_4="floor3"
-2d_physics/layer_5="players"
+2d_physics/layer_4="players"
+2d_physics/layer_5="objects"
 
 [physics]
 

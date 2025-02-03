@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3grh8kwer2ik"]
 
-[ext_resource type="Script" path="res://world/layer_switches/layer_switch_normal.gd" id="1_4krrj"]
+[ext_resource type="Script" uid="uid://c0krhakmtxpnr" path="res://world/layer_switches/layer_switch_normal.gd" id="1_4krrj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jopfb"]
 size = Vector2(48, 40)
@@ -13,5 +13,6 @@ script = ExtResource("1_4krrj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jopfb")
+debug_color = Color(0, 0.633004, 0.445287, 0.42)
 
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
