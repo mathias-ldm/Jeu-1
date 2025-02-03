@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dysc5wbxej0yy"
-path="res://.godot/imported/Water_light_green.png-17a885583c8a19f7b52617cc31ceaeb4.ctex"
+uid="uid://6vpbr4n675v5"
+path="res://.godot/imported/stone_bridges.png-89d21a09a15f95f76f79abf1eff88dab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Water_light_green.png"
-dest_files=["res://.godot/imported/Water_light_green.png-17a885583c8a19f7b52617cc31ceaeb4.ctex"]
+source_file="res://assets/stone_bridges.png"
+dest_files=["res://.godot/imported/stone_bridges.png-89d21a09a15f95f76f79abf1eff88dab.ctex"]
 
 [params]
 

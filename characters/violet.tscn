@@ -1,24 +1,28 @@
-[gd_scene load_steps=218 format=3 uid="uid://d0pr7fxw0mj6o"]
+[gd_scene load_steps=219 format=3 uid="uid://b3141w0lk245k"]
 
-[ext_resource type="Texture2D" uid="uid://b188f5t24cl2p" path="res://assets/Characters/Girl/Dash - NEW/Dash_up.png" id="1_6mt4p"]
+[ext_resource type="Texture2D" uid="uid://b188f5t24cl2p" path="res://assets/Violet/Dash - NEW/Dash_up.png" id="1_6mt4p"]
 [ext_resource type="Script" path="res://violet.gd" id="1_c5jxe"]
-[ext_resource type="Texture2D" uid="uid://bcxcf7asnhu3f" path="res://assets/Characters/Girl/Dash - NEW/Dash_right_Up.png" id="2_fxpgd"]
-[ext_resource type="Texture2D" uid="uid://b2ii73iouyqm2" path="res://assets/Characters/Girl/Dash - NEW/Dash_left_Up.png" id="3_6dfnw"]
-[ext_resource type="Texture2D" uid="uid://dk6hh6brjtofa" path="res://assets/Characters/Girl/Dash - NEW/Dash_Down.png" id="4_4msx8"]
-[ext_resource type="Texture2D" uid="uid://dv5qnn8oy5onx" path="res://assets/Characters/Girl/Dash - NEW/Dash_right_Down.png" id="5_c5hp8"]
-[ext_resource type="Texture2D" uid="uid://dey1kpb5cbvqu" path="res://assets/Characters/Girl/Dash - NEW/Dash_left_Down.png" id="6_h52kr"]
-[ext_resource type="Texture2D" uid="uid://dutq1cag2mpky" path="res://assets/Characters/Girl/Idle/idle_up.png" id="7_nkwqh"]
-[ext_resource type="Texture2D" uid="uid://d0n45cfwpcca2" path="res://assets/Characters/Girl/Idle/idle_right_up.png" id="8_74xfw"]
-[ext_resource type="Texture2D" uid="uid://4f0brbx1pxpi" path="res://assets/Characters/Girl/Idle/idle_left_up.png" id="9_qagkm"]
-[ext_resource type="Texture2D" uid="uid://b3sk7x3pcov58" path="res://assets/Characters/Girl/Idle/idle_down.png" id="10_6ey76"]
-[ext_resource type="Texture2D" uid="uid://fnkxhy1xwimn" path="res://assets/Characters/Girl/Idle/idle_right_down.png" id="11_ofdtw"]
-[ext_resource type="Texture2D" uid="uid://b616qgim1xjq5" path="res://assets/Characters/Girl/Idle/idle_left_down.png" id="12_r7sk4"]
-[ext_resource type="Texture2D" uid="uid://dptj3c1qqo1s" path="res://assets/Characters/Girl/Walk/walk_right_down.png" id="13_rg2s5"]
-[ext_resource type="Texture2D" uid="uid://ciuob1sykqmo7" path="res://assets/Characters/Girl/Walk/walk_up.png" id="14_hx31u"]
-[ext_resource type="Texture2D" uid="uid://bsdru1h2r484y" path="res://assets/Characters/Girl/Walk/walk_right_up.png" id="15_ua60s"]
-[ext_resource type="Texture2D" uid="uid://b0kcsrfwk1n36" path="res://assets/Characters/Girl/Walk/walk_left_up.png" id="16_aw7nl"]
-[ext_resource type="Texture2D" uid="uid://2hjkncugk34u" path="res://assets/Characters/Girl/Walk/walk_down.png" id="17_cn08g"]
-[ext_resource type="Texture2D" uid="uid://k7447kgygsc4" path="res://assets/Characters/Girl/Walk/walk_left_down.png" id="18_ty3c2"]
+[ext_resource type="Texture2D" uid="uid://bcxcf7asnhu3f" path="res://assets/Violet/Dash - NEW/Dash_right_Up.png" id="2_fxpgd"]
+[ext_resource type="Texture2D" uid="uid://b2ii73iouyqm2" path="res://assets/Violet/Dash - NEW/Dash_left_Up.png" id="3_6dfnw"]
+[ext_resource type="Texture2D" uid="uid://dk6hh6brjtofa" path="res://assets/Violet/Dash - NEW/Dash_Down.png" id="4_4msx8"]
+[ext_resource type="Texture2D" uid="uid://dv5qnn8oy5onx" path="res://assets/Violet/Dash - NEW/Dash_right_Down.png" id="5_c5hp8"]
+[ext_resource type="Texture2D" uid="uid://dey1kpb5cbvqu" path="res://assets/Violet/Dash - NEW/Dash_left_Down.png" id="6_h52kr"]
+[ext_resource type="Texture2D" uid="uid://dutq1cag2mpky" path="res://assets/Violet/Idle/idle_up.png" id="7_nkwqh"]
+[ext_resource type="Texture2D" uid="uid://d0n45cfwpcca2" path="res://assets/Violet/Idle/idle_right_up.png" id="8_74xfw"]
+[ext_resource type="Texture2D" uid="uid://4f0brbx1pxpi" path="res://assets/Violet/Idle/idle_left_up.png" id="9_qagkm"]
+[ext_resource type="Texture2D" uid="uid://b3sk7x3pcov58" path="res://assets/Violet/Idle/idle_down.png" id="10_6ey76"]
+[ext_resource type="Texture2D" uid="uid://fnkxhy1xwimn" path="res://assets/Violet/Idle/idle_right_down.png" id="11_ofdtw"]
+[ext_resource type="Texture2D" uid="uid://b616qgim1xjq5" path="res://assets/Violet/Idle/idle_left_down.png" id="12_r7sk4"]
+[ext_resource type="Texture2D" uid="uid://dptj3c1qqo1s" path="res://assets/Violet/Walk/walk_right_down.png" id="13_rg2s5"]
+[ext_resource type="Texture2D" uid="uid://ciuob1sykqmo7" path="res://assets/Violet/Walk/walk_up.png" id="14_hx31u"]
+[ext_resource type="Texture2D" uid="uid://bsdru1h2r484y" path="res://assets/Violet/Walk/walk_right_up.png" id="15_ua60s"]
+[ext_resource type="Texture2D" uid="uid://b0kcsrfwk1n36" path="res://assets/Violet/Walk/walk_left_up.png" id="16_aw7nl"]
+[ext_resource type="Texture2D" uid="uid://2hjkncugk34u" path="res://assets/Violet/Walk/walk_down.png" id="17_cn08g"]
+[ext_resource type="Texture2D" uid="uid://k7447kgygsc4" path="res://assets/Violet/Walk/walk_left_down.png" id="18_ty3c2"]
+
+[sub_resource type="Curve" id="Curve_gu0cf"]
+_data = [Vector2(0, 0.25), 0.0, 1.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="Animation" id="Animation_2yi81"]
 resource_name = "walk_N"
@@ -1590,14 +1594,7 @@ animations = [{
 
 [node name="Violet" type="CharacterBody2D"]
 script = ExtResource("1_c5jxe")
-idle_coef = null
-walk_coef = null
-run_coef = null
-move_speed = null
-walk_speed = null
-run_speed = null
-starting_direction = null
-walk_duration_threshold = null
+speed_curve = SubResource("Curve_gu0cf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -1614,6 +1611,6 @@ parameters/Idle/BlendSpace2D/blend_position = Vector2(0.246423, 0.883492)
 parameters/Walk/BlendSpace2D/blend_position = Vector2(0, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1.8, 1.8)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_8hq2w")
 animation = &"idle_N"

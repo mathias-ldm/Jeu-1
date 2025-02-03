@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://lqm4q4nrnjnl" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Wall.png" id="4_6fr0d"]
 [ext_resource type="Texture2D" uid="uid://buyng3mgubbk3" path="res://assets/WaterFall/WaterFall(Water).png" id="6_t0ub0"]
 [ext_resource type="Texture2D" uid="uid://odg4ughtjl5i" path="res://assets/Pixel Art Top Down - Basic v1.1.2/Texture/TX Tileset Stone Ground.png" id="7_1dr1o"]
-[ext_resource type="PackedScene" uid="uid://b3141w0lk245k" path="res://violet.tscn" id="8_mqpnh"]
+[ext_resource type="PackedScene" path="res://violet.tscn" id="8_mqpnh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_26lgx"]
 texture = ExtResource("3_se8m2")
